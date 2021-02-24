@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #div1 {
+              height: 600px;
+              width: 600px;
+              margin: 0 auto;
+              background-color: #050210;
+              position: relative;
+      }
+      #div2 {
+              margin: 0 auto;
+              margin-top: 120px;
+              margin-left: 150px;
+              width: 300px;
+              height: 300px;
+              background: linear-gradient(#fb5dad, #55fb9f, #55fb9f, #b97aff);
+              border-radius: 50%;
+              animation: spin 2s linear infinite;
+              position: absolute;
+
+            }
+            #div2::after {
+              content: "";
+              margin: 0 auto;
+              width: 300px;
+              height: 300px;
+              background: linear-gradient(#fb5dad, #55fb9f, #55fb9f, #b97aff);
+              border-radius: 50%;
+              animation: spin 2s linear infinite;
+              position: absolute;
+              filter: blur(35px);
+            }
+            #div3 {
+              background: #050210;
+              width: 265px;
+              height: 265px;
+              border-radius: 50%;
+              margin: auto;
+              margin-top: 138px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              z-index: 1;
+            }
+            #div4 {
+                height: 20px;
+                width: 20px;
+                background: rgba(102, 51, 153, 0.11);
+                border-radius: 50%;
+                position: absolute;
+                margin-top: 260px;
+          margin-left: 290px;
+          z-index: 1;
+          animation: pulse 1s ease-out infinite
+            }
+            #div5{
+          height: 240px;
+          width: 240px;
+          background: rgba(102, 51, 153, 0.11) ;
+          border-radius: 50%;
+          position: absolute;
+          margin-top: 150px;
+          margin-left: 180px;
+          z-index: 2;
+          animation: pulse2 1s ease-out infinite
+
+            }
+            @keyframes spin {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+            @keyframes pulse {
+                0% {
+                 transform: scale(1);
+                }
+
+            100% {
+              transform: scale(11);
+            }
+            }
+            @keyframes pulse2 {
+                0% {
+                    transform: scale(1);
+                }
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+            }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2"></div>
+      <div id="div3"></div>
+      <div id="div4"></div>
+      <div id="div5"></div>
+    </div>
+  </body>
+</html>
